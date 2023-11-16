@@ -83,4 +83,10 @@ public class Zombie : MonoBehaviour
         lastTurnPos = transform.position;
     }
 
+    public void loseHealth(int damage)
+    {
+        health -= damage;
+        if (health <= 0) { Destroy(gameObject); }
+    }
+
 }
