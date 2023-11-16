@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
-    public float speed = 25f;
+    public float speed = 15f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,29 +16,35 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 pos = transform.position;
+
+
         if (Input.GetKey(KeyCode.W)){
-            this.gameObject.transform.position += transform.forward * Time.deltaTime * speed;
+            pos.z += speed*Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.S)){
-            this.gameObject.transform.position += transform.forward * Time.deltaTime * -speed;
+            pos.z -= speed*Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A)){
-            this.gameObject.transform.position += transform.right * Time.deltaTime * -speed;
+            pos.x -= speed*Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.D)){
-            this.gameObject.transform.position += transform.right * Time.deltaTime * speed;
+            pos.x += speed*Time.deltaTime;
         }
 
+        transform.position = pos;
 
 
+        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float midPoint = (transform.position - Camera.main.transform.position).magnitude * .5f;
+        //transform.LookAt(mouseRay.origin + mouseRay.direction * midPoint);
 
-        Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        transform.LookAt(mouseScreenPosition);
-
-
+        Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint;
+        temp.y = 2;
+        transform.LookAt(temp);
+        
     }
 }
