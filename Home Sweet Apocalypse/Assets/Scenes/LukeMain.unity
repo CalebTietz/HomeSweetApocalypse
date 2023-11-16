@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &187008331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 226788392497582515, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+  m_PrefabInstance: {fileID: 1919977988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466797856
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 907697689}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 50, z: 0}
+  m_LocalPosition: {x: 0, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,10 +427,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4438492910423180307, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
-      propertyPath: m_Constraints
-      value: 36
+    - target: {fileID: 2645121566473215074, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: bullet
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2645121566473215074, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: launchPoint
+      value: 
+      objectReference: {fileID: 187008331}
+    - target: {fileID: 2645121566473215074, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8556698629971151400, guid: 1d4a2ec7dced7e541900f0d2142c64ee, type: 3}
     - target: {fileID: 4680191359082545172, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_Name
       value: Temp_Player
@@ -469,10 +482,6 @@ PrefabInstance:
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6386609126843451690, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
-      propertyPath: speed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

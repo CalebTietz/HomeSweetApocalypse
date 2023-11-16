@@ -5,13 +5,27 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [Header("Inscribed")]
     public float speed = 15f;
+    public GameObject bulletPrefab;
+
+    [Header("Dynamic")]
+
+
+    public GameObject bullet;
+    public GameObject launchPoint;
+    public Vector3 launchPos;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    void Awake(){
+        Transform launchPointTrans = transform.Find("LaunchPoint");
+        launchPoint = launchPointTrans.gameObject;
+
+        launchPoint.SetActive(false);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -33,6 +47,19 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D)){
             pos.x += speed*Time.deltaTime;
+        }
+        if(Input.GetMouseButtonDown(0)){
+
+            launchPoint.SetActive(true);
+            Transform launchPointTrans = transform.Find("LaunchPoint");
+            launchPoint = launchPointTrans.gameObject;
+            launchPos = launchPointTrans.position;
+
+            bullet = Instantiate(bulletPrefab) as GameObject;
+            bullet.transform.position = launchPos;
+            bullet.GetComponent<Rigidbody>().isKinematic = true;
+            
+        
         }
 
         transform.position = pos;
