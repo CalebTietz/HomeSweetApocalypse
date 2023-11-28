@@ -32,11 +32,7 @@ public class Zombie : MonoBehaviour
         lastTurnPos = transform.position;
 
         // ensure zombieType is set to a valid type. Set to default type if not.
-<<<<<<< Updated upstream
         if (zombieType < 0 || zombieType > NUM_ZOMBIE_TYPES - 1) { zombieType = 0; }
-=======
-        if(zombieType < 0 || zombieType > NUM_ZOMBIE_TYPES - 1) { zombieType = 0; }
->>>>>>> Stashed changes
 
         // set stats for each zombie type
         switch (zombieType)
@@ -66,7 +62,6 @@ public class Zombie : MonoBehaviour
         transform.Translate(Quaternion.Euler(0, -90, 0) * Vector3.forward * Time.deltaTime * speed);
     }
 
-<<<<<<< Updated upstream
     // turn the zombie in specified direction: left or right, by 90 degrees
     public void turn(string direction)
     {
@@ -81,29 +76,12 @@ public class Zombie : MonoBehaviour
         }
         
         if (direction == "right")
-=======
-    private void OnTriggerEnter(Collider other)
-    {
-
-        Debug.Log((lastTurnPos - transform.position).magnitude);
-        if ( (lastTurnPos - transform.position).magnitude <= TURN_COOLDOWN_DISTANCE) return;
-
-        Debug.Log("test");
-
-        if(other.gameObject.tag == "turnLeft")
-        {
-            transform.Rotate(0, -90, 0);
-        }
-
-        if(other.gameObject.tag == "turnRight")
->>>>>>> Stashed changes
         {
             transform.Rotate(0, 90, 0);
         }
 
         lastTurnPos = transform.position;
     }
-<<<<<<< Updated upstream
 
     public void loseHealth(int damage)
     {
@@ -111,6 +89,4 @@ public class Zombie : MonoBehaviour
         if (health <= 0) { Destroy(gameObject); }
     }
 
-=======
->>>>>>> Stashed changes
 }

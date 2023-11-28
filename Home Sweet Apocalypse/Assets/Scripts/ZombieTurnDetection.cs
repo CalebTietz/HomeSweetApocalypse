@@ -13,6 +13,9 @@ public class ZombieTurnDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string tag = other.gameObject.tag;
+
+        Debug.Log(tag);
+
         if (tag == null) return;
         
         if (tag == "turnLeft")
