@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &2202269301509003071
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1c452a2960924bab2068da841d86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &7056945242048104460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,6 +79,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
@@ -85,6 +89,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+=======
+      value: 13.652681
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.29
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -114,6 +129,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: -7905150212132207772, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -142,17 +158,24 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 919132149155446097, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_Name
       value: Normal Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
+<<<<<<< Updated upstream
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1298474708777960130, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_Layer
       value: 6
+=======
+      propertyPath: m_TagString
+      value: Zombie
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 7999685847110662348, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -166,6 +189,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.0021
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 8228481481743427302, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -177,6 +201,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7792315527458974926}
+=======
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2436035867884746579, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
+    m_AddedGameObjects: []
+>>>>>>> Stashed changes
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
       insertIndex: -1
@@ -251,11 +281,14 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8839368762345780380, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
+<<<<<<< Updated upstream
 --- !u!4 &7378575365365854183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
   m_PrefabInstance: {fileID: 7056945242048104460}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &7583680741425441892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: 4559addc306d82a418e4784d1d95246b, type: 3}
@@ -307,13 +340,21 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
+<<<<<<< Updated upstream
     m_Bits: 64
+=======
+    m_Bits: 0
+>>>>>>> Stashed changes
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
+<<<<<<< Updated upstream
   m_Constraints: 112
+=======
+  m_Constraints: 0
+>>>>>>> Stashed changes
   m_CollisionDetection: 0
 --- !u!114 &-654605883036657210
 MonoBehaviour:
