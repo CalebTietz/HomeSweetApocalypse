@@ -40,7 +40,6 @@ public class HealthBar : MonoBehaviour
     {
         if (healthGradient.Count < 2) return; // less than two colors. Cannot apply gradient.
 
-        healthIndicator.fillAmount = val;
 
         Color healthColor;
 
@@ -58,6 +57,8 @@ public class HealthBar : MonoBehaviour
         }
 
         healthColor.a = 1f;
-        healthIndicator.color = healthColor;
+        float easing = 0.3f;
+        healthIndicator.color = Color.Lerp(healthIndicator.color, healthColor, easing);
+        healthIndicator.fillAmount = Mathf.Lerp(healthIndicator.fillAmount, val, easing);
     }
 }
