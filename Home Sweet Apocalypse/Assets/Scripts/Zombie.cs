@@ -65,7 +65,6 @@ public class Zombie : MonoBehaviour
     // turn the zombie in specified direction: left or right, by 90 degrees
     public void turn(string direction)
     {
-        Debug.Log((lastTurnPos - transform.position).magnitude);
         if ((lastTurnPos - transform.position).magnitude <= TURN_COOLDOWN_DISTANCE) return;
 
         Debug.Log("test");

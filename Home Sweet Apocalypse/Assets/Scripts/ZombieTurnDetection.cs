@@ -5,16 +5,9 @@ using UnityEngine;
 
 public class ZombieTurnDetection : MonoBehaviour
 {
-
-    void Start()
-    {
-        Debug.Log("start");    
-    }
     private void OnTriggerEnter(Collider other)
     {
         string tag = other.gameObject.tag;
-
-        Debug.Log(tag);
 
         if (tag == null) return;
         
