@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int speed;
+    public int damage;
+
+    private Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity = Vector3.forward * speed * Time.deltaTime;
     }
 }

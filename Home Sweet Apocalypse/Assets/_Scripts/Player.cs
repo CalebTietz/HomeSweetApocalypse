@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -17,6 +18,9 @@ public class Player : MonoBehaviour
     public GameObject launchPoint;
     public Vector3 launchPos;
 
+    private float lastShotTime;
+    private float shootInterval;
+
     // Start is called before the first frame update
 
     void Awake(){
@@ -24,6 +28,8 @@ public class Player : MonoBehaviour
         launchPoint = launchPointTrans.gameObject;
 
         launchPoint.SetActive(false);
+        lastShotTime = 0f;
+        shootInterval = 0.1f;
     }
 
 
@@ -48,19 +54,6 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D)){
             pos.x += speed*Time.deltaTime;
         }
-        if(Input.GetMouseButtonDown(0)){
-
-            launchPoint.SetActive(true);
-            Transform launchPointTrans = transform.Find("LaunchPoint");
-            launchPoint = launchPointTrans.gameObject;
-            launchPos = launchPointTrans.position;
-
-            bullet = Instantiate(bulletPrefab) as GameObject;
-            bullet.transform.position = launchPos;
-            bullet.GetComponent<Rigidbody>().isKinematic = true;
-            
-        
-        }
 
         transform.position = pos;
 
@@ -72,6 +65,26 @@ public class Player : MonoBehaviour
         Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint;
         temp.y = 2;
         transform.LookAt(temp);
+        
+        if(Input.GetMouseButton(0)){
+
+            if (lastShotTime == 0f || lastShotTime + shootInterval < Time.time)
+            {
+                lastShotTime = Time.time;
+
+                launchPoint.SetActive(true);
+                Transform launchPointTrans = transform.Find("LaunchPoint");
+                launchPoint = launchPointTrans.gameObject;
+                launchPos = launchPointTrans.position;
+
+                bullet = Instantiate(bulletPrefab) as GameObject;
+                bullet.transform.position = launchPos;
+                bullet.transform.LookAt(temp);
+                //bullet.GetComponent<Rigidbody>().isKinematic = true;
+            }
+            
+        
+        }
         
     }
 }
