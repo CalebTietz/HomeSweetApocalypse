@@ -60,6 +60,11 @@ public class Zombie : MonoBehaviour
     void Update()
     {
         transform.Translate(Quaternion.Euler(0, -90, 0) * Vector3.forward * Time.deltaTime * speed);
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            loseHealth(5);
+        }
     }
 
     // turn the zombie in specified direction: left or right, by 90 degrees
@@ -84,8 +89,52 @@ public class Zombie : MonoBehaviour
 
     public void loseHealth(int damage)
     {
+
+        Material[] mats = getAllMaterials();
+        Color[] originalColors = new Color[mats.Length];
+
+        // get original colors
+        for (int i = 0; i < mats.Length; i++)
+        {
+            originalColors[i] = mats[i].color;
+        }
+
+        // set gameObject to red
+        for (int i = 0; i < mats.Length; i++)
+        {
+            mats[i].color = Color.red;
+        }
+
+        // wait a few frames
+        float blinkTime = Time.time + 0.1f;
+        while(Time.time < blinkTime)
+        {
+            int a = 5;
+        }
+
+        // restore gameObject's original colors
+        for (int i = 0; i < mats.Length; i++)
+        {
+            mats[i].color = originalColors[i];
+        }
+
+
+
         health -= damage;
         if (health <= 0) { Destroy(gameObject); }
+    }
+
+    private Material[] getAllMaterials()
+    {
+        Renderer[] rend = GetComponentsInChildren<Renderer>();
+
+        Material[] mats = new Material[rend.Length];
+        for (int i = 0; i < rend.Length; i++)
+        {
+            mats[i] = rend[i].material;
+        }
+
+        return mats;
     }
 
 }
