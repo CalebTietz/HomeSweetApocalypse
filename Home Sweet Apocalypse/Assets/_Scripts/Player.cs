@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
     public GameObject launchPoint;
     public Vector3 launchPos;
+    public float bulletSpeed = 20;
 
     private float lastShotTime;
     private float shootInterval;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
 
     void Awake(){
+
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
 
@@ -79,7 +81,11 @@ public class Player : MonoBehaviour
 
                 bullet = Instantiate(bulletPrefab) as GameObject;
                 bullet.transform.position = launchPos;
-                bullet.transform.LookAt(temp);
+                
+                Vector3 direction = new Vector3(temp.x, temp.y, temp.z);
+                bullet.GetComponent<Rigidbody>().velocity += bulletSpeed *direction;
+
+                //bullet.transform.LookAt(temp);
                 //bullet.GetComponent<Rigidbody>().isKinematic = true;
             }
             
