@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1405554164955437502}
   - component: {fileID: 673312095520076905}
   - component: {fileID: 805141574590445453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7329814377000999347}
   - component: {fileID: 7668260597294231365}
   - component: {fileID: 3646398691565597739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6763626067095436735}
   - component: {fileID: 6779238210484824794}
   - component: {fileID: 3713866144198895647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: House_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 273335072773025695}
   - component: {fileID: 6548766101528855830}
   - component: {fileID: 6163542748948805120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 2571368023177636742}
   - component: {fileID: 6329172004595049985}
   - component: {fileID: 8747921753377262029}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 2275685165218418425}
   - component: {fileID: 3024492563793460856}
   - component: {fileID: 7190399936712797091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 686092018765448819}
   - component: {fileID: 1921566800096869530}
   - component: {fileID: 4736169320669023229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,9 +745,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2499190182620222391}
   - component: {fileID: 6352128612683219927}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: House
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

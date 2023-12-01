@@ -35,7 +35,6 @@ public class Bullet : MonoBehaviour
         if (collidedWith.CompareTag("Zombie"))
         {
             Destroy(gameObject);
-            currentHitPoints = currentHitPoints - 1;
 
         }
     }

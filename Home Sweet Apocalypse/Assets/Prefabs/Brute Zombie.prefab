@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8270592303521586625}
   - component: {fileID: 1936718976906789734}
   - component: {fileID: 5318657159584377733}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3762826782117808017}
   - component: {fileID: 6439838639550419208}
   - component: {fileID: 5745100574165268696}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 5497484916550233752}
   - component: {fileID: 2417320057415547710}
   - component: {fileID: 8760701708850011597}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 4698767617084480045}
   - component: {fileID: 4892502439910564456}
   - component: {fileID: 1080170582890619619}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 9147268473526889657}
   - component: {fileID: 287843359509400189}
   - component: {fileID: 6413335923828889206}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Tooth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 7616389315070302790}
   - component: {fileID: 2064288143109801681}
   - component: {fileID: 6331650181137518718}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 5725633553864341929}
   - component: {fileID: 7013747159442013222}
   - component: {fileID: 2546400104948458206}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: turnCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 3214126505318331357}
   - component: {fileID: 3993278060203708166}
   - component: {fileID: 8202475074401364515}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: one
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 4858773860183430903}
   - component: {fileID: 1572535042616462590}
   - component: {fileID: 5463100639996665949}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Brute Zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 567066909606291442}
   - component: {fileID: 3677924262042710782}
   - component: {fileID: 5761794375021520591}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 1033434414393301706}
   - component: {fileID: 8255709447628812243}
   - component: {fileID: 4024624957398179560}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 3643197009898178569}
   - component: {fileID: 8049895018274506713}
   - component: {fileID: 4059742086299492776}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}

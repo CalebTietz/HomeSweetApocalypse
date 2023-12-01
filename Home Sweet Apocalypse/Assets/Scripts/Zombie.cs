@@ -130,4 +130,15 @@ public class Zombie : MonoBehaviour
         return mats;
     }
 
+
+        private void OnCollisionEnter(Collision coll)
+    {
+        //if youd collide with a zombie the bullet is destroyed and the zombie is damaged
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.CompareTag("Bullet"))
+        {
+            loseHealth(5);
+        }
+    }
+
 }
