@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //moves player with WASD keys.
         Vector3 pos = transform.position;
 
 
@@ -59,12 +60,14 @@ public class Player : MonoBehaviour
 
         transform.position = pos;
 
-
+        // Code to make a point for player to look at in between itself and mouse. Makes shooting easier
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         float midPoint = (transform.position - Camera.main.transform.position).magnitude * .5f;
+        Vector3 point = transform.position - Camera.main.transform.position;
+        
         //transform.LookAt(mouseRay.origin + mouseRay.direction * midPoint);
 
-        Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint;
+        Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint ;
         temp.y = 2;
         transform.LookAt(temp);
         
@@ -81,11 +84,11 @@ public class Player : MonoBehaviour
 
                 bullet = Instantiate(bulletPrefab) as GameObject;
                 bullet.transform.position = launchPos;
-                
+
                 Vector3 direction = new Vector3(temp.x, temp.y, temp.z);
                 bullet.GetComponent<Rigidbody>().velocity += bulletSpeed *direction;
 
-                //bullet.transform.LookAt(temp);
+                bullet.transform.LookAt(temp);
                 //bullet.GetComponent<Rigidbody>().isKinematic = true;
             }
             

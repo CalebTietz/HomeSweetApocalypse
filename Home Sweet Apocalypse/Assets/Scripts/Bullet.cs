@@ -28,6 +28,18 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision coll)
+    {
+        //if youd collide with a zombie the bullet is destroyed and the zombie is damaged
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.CompareTag("Zombie"))
+        {
+            Destroy(gameObject);
+            currentHitPoints = currentHitPoints - 1;
+
+        }
+    }
+
     void FixedUpdate()
     {
         //rb.velocity = Vector3.forward * speed * Time.deltaTime;
