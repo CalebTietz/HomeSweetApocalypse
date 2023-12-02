@@ -183,7 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  bulletPrefab: {fileID: 0}
+  bullet: {fileID: 0}
   launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  bulletSpeed: 2000
 --- !u!1 &5696950213456886698
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,9 @@ public class Zombie : MonoBehaviour
 
     private Rigidbody rb;
 
+    private Material[] mats;
+    private Color[] originalColors;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,15 @@ public class Zombie : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody>();
+
+        mats = getAllMaterials();
+        originalColors = new Color[mats.Length];
+
+        // get original colors
+        for (int i = 0; i < mats.Length; i++)
+        {
+            originalColors[i] = mats[i].color;
+        }
     }
 
     // Update is called once per frame
@@ -92,14 +104,7 @@ public class Zombie : MonoBehaviour
 
     private IEnumerator blinkRed()
     {
-        Material[] mats = getAllMaterials();
-        Color[] originalColors = new Color[mats.Length];
-
-        // get original colors
-        for (int i = 0; i < mats.Length; i++)
-        {
-            originalColors[i] = mats[i].color;
-        }
+        
 
         // set gameObject to red
         for (int i = 0; i < mats.Length; i++)
@@ -128,17 +133,6 @@ public class Zombie : MonoBehaviour
         }
 
         return mats;
-    }
-
-
-        private void OnCollisionEnter(Collision coll)
-    {
-        //if youd collide with a zombie the bullet is destroyed and the zombie is damaged
-        GameObject collidedWith = coll.gameObject;
-        if (collidedWith.CompareTag("Bullet"))
-        {
-            loseHealth(5);
-        }
     }
 
 }

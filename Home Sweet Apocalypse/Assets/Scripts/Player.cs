@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
     public GameObject launchPoint;
     public Vector3 launchPos;
-    public float bulletSpeed = 20;
+    public float bulletSpeed = 20000;
 
     private float lastShotTime;
     private float shootInterval;
@@ -85,10 +85,11 @@ public class Player : MonoBehaviour
                 bullet = Instantiate(bulletPrefab) as GameObject;
                 bullet.transform.position = launchPos;
 
-                Vector3 direction = new Vector3(temp.x, temp.y, temp.z);
-                bullet.GetComponent<Rigidbody>().velocity += bulletSpeed *direction;
+                Vector3 dir = Vector3.Normalize(temp);
+                bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * dir;
 
                 bullet.transform.LookAt(temp);
+                //bullet.transform.rotation = new Quaternion(0f, 0f, 90f, 0f);
                 //bullet.GetComponent<Rigidbody>().isKinematic = true;
             }
             

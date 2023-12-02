@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
 
-    public int damage;
+    public int damage = 5;
     public float xLimit = 10;
     public float yLimit = 10;
 
@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.CompareTag("Zombie"))
         {
+            collidedWith.GetComponent<Zombie>().loseHealth(damage);
             Destroy(gameObject);
 
         }
