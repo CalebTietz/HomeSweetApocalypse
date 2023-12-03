@@ -5,12 +5,18 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-
     public int damage = 5;
-    public float xLimit = 10;
-    public float yLimit = 10;
-
+    public float speed = 50;
     private Rigidbody rb;
+
+    void Start(){
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.y=2;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        Vector3 direction = (transform.position-mousePos);
+        rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * speed;
+
+    }
 
 
     // Update is called once per frame
@@ -38,10 +44,5 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
 
         }
-    }
-
-    void FixedUpdate()
-    {
-        //rb.velocity = Vector3.forward * speed * Time.deltaTime;
     }
 }

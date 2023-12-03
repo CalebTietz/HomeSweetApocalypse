@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
     public GameObject launchPoint;
     public Vector3 launchPos;
-    public float bulletSpeed = 20000;
+    public float bulletSpeed = 20;
 
     private float lastShotTime;
     private float shootInterval;
@@ -63,11 +63,11 @@ public class Player : MonoBehaviour
         // Code to make a point for player to look at in between itself and mouse. Makes shooting easier
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         float midPoint = (transform.position - Camera.main.transform.position).magnitude * .5f;
-        Vector3 point = transform.position - Camera.main.transform.position;
-        
+       
         //transform.LookAt(mouseRay.origin + mouseRay.direction * midPoint);
 
         Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint ;
+        //because the mouse is at y=40 due, manually set it to 2
         temp.y = 2;
         transform.LookAt(temp);
         
@@ -75,7 +75,11 @@ public class Player : MonoBehaviour
 
             if (lastShotTime == 0f || lastShotTime + shootInterval < Time.time)
             {
+
+
                 lastShotTime = Time.time;
+
+                
 
                 launchPoint.SetActive(true);
                 Transform launchPointTrans = transform.Find("LaunchPoint");
@@ -85,10 +89,13 @@ public class Player : MonoBehaviour
                 bullet = Instantiate(bulletPrefab) as GameObject;
                 bullet.transform.position = launchPos;
 
-                Vector3 dir = Vector3.Normalize(temp);
-                bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * dir;
 
-                bullet.transform.LookAt(temp);
+                //Vector3 target = (worldPosition+launchPos)/2;
+
+                //Vector3 dir = Vector3.Normalize(target);
+                //bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * temp;
+
+                //bullet.transform.LookAt(temp);
                 //bullet.transform.rotation = new Quaternion(0f, 0f, 90f, 0f);
                 //bullet.GetComponent<Rigidbody>().isKinematic = true;
             }
