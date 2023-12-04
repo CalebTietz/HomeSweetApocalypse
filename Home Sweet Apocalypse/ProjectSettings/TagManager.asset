@@ -9,6 +9,7 @@ TagManager:
   - Zombie
   - House
   - Bullet
+  - zombiePart
   layers:
   - Default
   - TransparentFX

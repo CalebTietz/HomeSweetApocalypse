@@ -79,8 +79,6 @@ public class Zombie : MonoBehaviour
     {
         if ((lastTurnPos - transform.position).magnitude <= TURN_COOLDOWN_DISTANCE) return;
 
-        Debug.Log("test");
-
         if (direction == "left")
         {
             transform.Rotate(0, -90, 0);
@@ -99,7 +97,11 @@ public class Zombie : MonoBehaviour
         StartCoroutine(blinkRed());
 
         health -= damage;
-        if (health <= 0) { Destroy(gameObject); }
+        if (health <= 0)
+        {
+            Camera.main.GetComponent<Wave>().zombieDied();
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator blinkRed()
