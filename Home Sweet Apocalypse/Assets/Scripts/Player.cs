@@ -10,30 +10,17 @@ public class Player : MonoBehaviour
     [Header("Inscribed")]
     public float speed = 15f;
     public GameObject bulletPrefab;
+    public GameObject debugPrefab;
+    public bool canFire = true;
+    public float timer = 0;
 
     [Header("Dynamic")]
 
-
+    public float shotDelay = .3f;
     public GameObject bullet;
     public GameObject launchPoint;
     public Vector3 launchPos;
     public float bulletSpeed = 20;
-
-    private float lastShotTime;
-    private float shootInterval;
-
-    // Start is called before the first frame update
-
-    void Awake(){
-
-        Transform launchPointTrans = transform.Find("LaunchPoint");
-        launchPoint = launchPointTrans.gameObject;
-
-        launchPoint.SetActive(false);
-        lastShotTime = 0f;
-        shootInterval = 0.1f;
-    }
-
 
     // Update is called once per frame
     void Update()
@@ -70,37 +57,31 @@ public class Player : MonoBehaviour
         //because the mouse is at y=40 due, manually set it to 2
         temp.y = 2;
         transform.LookAt(temp);
-        
-        if(Input.GetMouseButton(0)){
 
-            if (lastShotTime == 0f || lastShotTime + shootInterval < Time.time)
-            {
+        //sets rate of fire for gun
+        if(canFire !=true){
+            timer += Time.deltaTime;
+            if(timer>shotDelay){
+                canFire = true;
+                timer=0;
+            }
+        }
 
-
-                lastShotTime = Time.time;
-
+        if(canFire == true){
+            if(Input.GetMouseButton(0)){
+                canFire = false;
                 
-
                 launchPoint.SetActive(true);
                 Transform launchPointTrans = transform.Find("LaunchPoint");
                 launchPoint = launchPointTrans.gameObject;
                 launchPos = launchPointTrans.position;
 
                 bullet = Instantiate(bulletPrefab) as GameObject;
+                
+
                 bullet.transform.position = launchPos;
-
-
-                //Vector3 target = (worldPosition+launchPos)/2;
-
-                //Vector3 dir = Vector3.Normalize(target);
-                //bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * temp;
-
-                //bullet.transform.LookAt(temp);
-                //bullet.transform.rotation = new Quaternion(0f, 0f, 90f, 0f);
-                //bullet.GetComponent<Rigidbody>().isKinematic = true;
+                bullet.transform.LookAt(temp);
             }
-            
-        
         }
         
     }
