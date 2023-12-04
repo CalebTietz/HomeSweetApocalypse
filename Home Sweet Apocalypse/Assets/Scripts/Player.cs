@@ -47,6 +47,14 @@ public class Player : MonoBehaviour
 
         transform.position = pos;
 
+
+        Vector3 v3 = Input.mousePosition;
+        v3.z=40;
+       // v3 = Camera.main.ScreenToWorldPoint(v3);
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(v3);
+        mousePos.y =2.5f;
+
         // Code to make a point for player to look at in between itself and mouse. Makes shooting easier
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         float midPoint = (transform.position - Camera.main.transform.position).magnitude * .5f;
@@ -55,8 +63,8 @@ public class Player : MonoBehaviour
 
         Vector3 temp = mouseRay.origin + mouseRay.direction * midPoint ;
         //because the mouse is at y=40 due, manually set it to 2
-        temp.y = 2;
-        transform.LookAt(temp);
+        temp.y = 2f;
+        transform.LookAt(mousePos);
 
         //sets rate of fire for gun
         if(canFire !=true){
