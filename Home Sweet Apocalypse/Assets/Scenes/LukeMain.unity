@@ -123,6 +123,103 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &58382888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 160568489511700056, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 353451593958888256, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371347840089386467, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499190182620222391, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076759070037568311, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783690850506055842, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015738714822237584, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081242801907999537, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_Name
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081242801907999537, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f47f096ad65991c4fb448c9abf073b25, type: 3}
 --- !u!1 &187008331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 226788392497582515, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
@@ -237,7 +334,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4858773860183430903, guid: e2e5b94f64e41214d9ed1edd00fc6663, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.05
+      value: 12.9
       objectReference: {fileID: 0}
     - target: {fileID: 4858773860183430903, guid: e2e5b94f64e41214d9ed1edd00fc6663, type: 3}
       propertyPath: m_LocalPosition.y
@@ -388,7 +485,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 50}
+  m_LocalScale: {x: 200, y: 1, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -549,16 +646,28 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalRotation.w
@@ -708,3 +817,4 @@ SceneRoots:
   - {fileID: 1919977988}
   - {fileID: 475947365}
   - {fileID: 2057331701}
+  - {fileID: 58382888}

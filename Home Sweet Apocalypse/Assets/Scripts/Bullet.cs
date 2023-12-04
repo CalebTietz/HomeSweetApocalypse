@@ -64,5 +64,10 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
 
         }
+        if (collidedWith.CompareTag("House"))
+        {
+            Destroy(gameObject);
+
+        }
     }
 }

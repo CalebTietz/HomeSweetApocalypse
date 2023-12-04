@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugPrefab: {fileID: 7151129863781524249, guid: debe3d9c3b15a114483ec026663b1088, type: 3}
-  damage: 5
+  damage: 25
   speed: 50
 --- !u!54 &-3125144749059243279
 Rigidbody:

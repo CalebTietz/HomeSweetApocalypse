@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public List<Color> healthGradient; // first element is full health, last element is low health
 
     [Range(0f, 1f)]
-    public float health;
+    public float health=1f;
 
     // Start is called before the first frame update
     void Start()
@@ -60,5 +60,10 @@ public class HealthBar : MonoBehaviour
         float easing = 0.3f;
         healthIndicator.color = Color.Lerp(healthIndicator.color, healthColor, easing);
         healthIndicator.fillAmount = Mathf.Lerp(healthIndicator.fillAmount, val, easing);
+    }
+
+    public void loseHealth(){
+
+        health -= .25f;
     }
 }
