@@ -11,6 +11,7 @@ public class Wave : MonoBehaviour
     public GameObject normalZombiePrefab;
     public GameObject speedZombiePrefab;
     public GameObject bruteZombiePrefab;
+    public ScoreCounter scoreCounter;
 
 
     private int wave;
@@ -26,6 +27,10 @@ public class Wave : MonoBehaviour
 
     void Start()
     {
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+
+        scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+
         wave = 1;
         zombiesToSpawn = 10;
         spawnInterval = 2f;
@@ -38,7 +43,7 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(zombiesRemaining);
+        //Debug.Log(zombiesRemaining);
 
         if(Time.time - lastSpawnTime > spawnInterval && zombiesRemaining > 0 && zombiesSpawned < zombiesToSpawn) // spawn zombies
         {
@@ -107,10 +112,12 @@ public class Wave : MonoBehaviour
 
     public void zombieDied()
     {
+        
         if (Time.time < lastZombieDiedTime + 0.01f) return;
         lastZombieDiedTime = Time.time;
         zombiesRemaining--;
         Debug.Log("zombie died");
+        scoreCounter.score+=100;
         if(zombiesRemaining == 0 )
         {
             startNextWave();

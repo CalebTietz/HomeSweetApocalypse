@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject debugPrefab;
-    public int damage = 5;
+    public int damage = 25;
     public float speed = 50;
     private Rigidbody rb;
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 805141574590445453}
   m_Layer: 9
   m_Name: Window
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 3646398691565597739}
   m_Layer: 9
   m_Name: Window (1)
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3713866144198895647}
   m_Layer: 9
   m_Name: House_Wall
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 8747921753377262029}
   m_Layer: 9
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 7190399936712797091}
   m_Layer: 9
   m_Name: Window (2)
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 4736169320669023229}
   m_Layer: 9
   m_Name: Window (3)
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,6 +745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2499190182620222391}
   - component: {fileID: 6352128612683219927}
+  - component: {fileID: 4213438861731960753}
   m_Layer: 9
   m_Name: House
   m_TagString: House
@@ -762,7 +763,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2142644564417773194}
@@ -786,4 +787,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1ba29c45ca1984ebc58b9859e0c31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 3
+--- !u!65 &4213438861731960753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081242801907999537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 18, y: 20, z: 21}
+  m_Center: {x: 0, y: 5, z: 0}

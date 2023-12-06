@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-
+    
     private static int NUM_ZOMBIE_TYPES = 3;
     /**
      * 
@@ -32,6 +32,7 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         lastTurnPos = transform.position;
 
         // ensure zombieType is set to a valid type. Set to default type if not.
@@ -99,8 +100,10 @@ public class Zombie : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            
             Camera.main.GetComponent<Wave>().zombieDied();
             Destroy(gameObject);
+            
         }
     }
 
