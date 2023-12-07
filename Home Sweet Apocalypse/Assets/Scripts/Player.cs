@@ -22,30 +22,62 @@ public class Player : MonoBehaviour
     public Vector3 launchPos;
     public float bulletSpeed = 20;
 
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //moves player with WASD keys.
+
+        // Store the current position
         Vector3 pos = transform.position;
 
+        // Calculate the movement direction based on user input
+        Vector3 moveDirection = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W)){
-            pos.z += speed*Time.deltaTime;
+        if(Input.GetKey(KeyCode.W))
+        {
+            moveDirection.z = 1;
+        }
+        if(Input.GetKey(KeyCode.S))
+        {
+            moveDirection.z = -1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveDirection.x = 1;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveDirection.x = -1;
         }
 
-        if (Input.GetKey(KeyCode.S)){
-            pos.z -= speed*Time.deltaTime;
-        }
+        moveDirection = moveDirection.normalized;
 
-        if (Input.GetKey(KeyCode.A)){
-            pos.x -= speed*Time.deltaTime;
-        }
+        // Check if the move direction is not zero (user is trying to move)
+        if (moveDirection.magnitude > 0.1f)
+        {
+            // Calculate the target position
+            Vector3 targetPos = pos + moveDirection * speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.D)){
-            pos.x += speed*Time.deltaTime;
+            // Perform a raycast to check for collisions before moving
+            RaycastHit hit;
+            if (!Physics.Raycast(pos, moveDirection, out hit, speed * Time.deltaTime))
+            {
+                // No collision, update the position
+                transform.position = targetPos;
+            }
+            /*else
+            {
+                // There's a collision, adjust the position to the point of collision
+                transform.position = hit.point - moveDirection * 0.1f; // Adjust the offset if needed
+            }*/
         }
-
-        transform.position = pos;
+        rb.velocity = new Vector3(0, rb.velocity.y, 0);
 
 
         Vector3 v3 = Input.mousePosition;

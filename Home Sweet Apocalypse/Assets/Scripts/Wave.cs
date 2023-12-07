@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using TMPro;
 
 public class Wave : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class Wave : MonoBehaviour
     public GameObject speedZombiePrefab;
     public GameObject bruteZombiePrefab;
     public ScoreCounter scoreCounter;
+    public TextMeshProUGUI waveCompleteText;
 
 
     private int wave;
@@ -20,13 +21,14 @@ public class Wave : MonoBehaviour
     private float lastSpawnTime;
     private int zombiesRemaining;
     private int zombiesSpawned;
-    private float lastZombieDiedTime;
 
     private System.Random rng = new System.Random();
 
 
     void Start()
     {
+        waveCompleteText.enabled = false;
+
         GameObject scoreGO = GameObject.Find("ScoreCounter");
 
         scoreCounter = scoreGO.GetComponent<ScoreCounter>();
@@ -35,7 +37,6 @@ public class Wave : MonoBehaviour
         zombiesToSpawn = 10;
         spawnInterval = 2f;
         lastSpawnTime = Time.time;
-        lastZombieDiedTime = Time.time;
         zombiesRemaining = zombiesToSpawn;
         zombiesSpawned = 0;
     }
@@ -44,6 +45,7 @@ public class Wave : MonoBehaviour
     void Update()
     {
         //Debug.Log(zombiesRemaining);
+        if (spawnLocations.Count == 0) return;
 
         if(Time.time - lastSpawnTime > spawnInterval && zombiesRemaining > 0 && zombiesSpawned < zombiesToSpawn) // spawn zombies
         {
@@ -65,11 +67,11 @@ public class Wave : MonoBehaviour
                 }
 
                 int rnd = rng.Next(100);
-                if(rnd <= 50)
+                if(rnd <= 60)
                 {
                     zombie = Instantiate(normalZombiePrefab);
                 }
-                else if(rnd <= 75)
+                else if(rnd <= 90)
                 {
                     zombie = Instantiate(speedZombiePrefab);
                 }
@@ -101,8 +103,11 @@ public class Wave : MonoBehaviour
         }
     }
 
-    private void startNextWave()
+    private IEnumerator startNextWave()
     {
+        waveCompleteText.enabled = true;
+        yield return new WaitForSeconds(2f);
+        waveCompleteText.enabled = false;
         wave++;
         zombiesToSpawn += 3;
         zombiesRemaining = zombiesToSpawn;
@@ -110,17 +115,25 @@ public class Wave : MonoBehaviour
         zombiesSpawned = 0;
     }
 
+    private IEnumerator processZombieDied()
+    {
+        zombiesRemaining--;
+        Debug.Log(zombiesRemaining);
+        scoreCounter.score+=100;
+        if(zombiesRemaining <= 0 )
+        {
+            yield return new WaitForSeconds(0.1f);
+            Debug.Log("no zombies");
+            if(GameObject.Find("Normal Zombie(Clone)") == null && GameObject.Find("Speed Zombie(Clone)") == null && GameObject.Find("Brute Zombie(Clone)") == null)
+            {
+                Debug.Log("start next wave");
+                StartCoroutine(startNextWave());
+            }
+        }
+    }
+
     public void zombieDied()
     {
-        
-        if (Time.time < lastZombieDiedTime + 0.01f) return;
-        lastZombieDiedTime = Time.time;
-        zombiesRemaining--;
-        Debug.Log("zombie died");
-        scoreCounter.score+=100;
-        if(zombiesRemaining == 0 )
-        {
-            startNextWave();
-        }
+        StartCoroutine(processZombieDied());
     }
 }

@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     public float speed = 50;
     private Rigidbody rb;
 
+    private bool hasHitZombie = false;
     void Start(){
         Vector3 v3 = Input.mousePosition;
         v3.z=40;
@@ -60,9 +61,14 @@ public class Bullet : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.CompareTag("Zombie"))
         {
-            collidedWith.GetComponent<Zombie>().loseHealth(damage);
+
+            if(!hasHitZombie)
+            {
+                collidedWith.GetComponent<Zombie>().loseHealth(damage);
+            }
             Destroy(gameObject);
 
+            hasHitZombie = true;
         }
         if (collidedWith.CompareTag("House"))
         {
