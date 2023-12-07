@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7964576025385141871}
   - component: {fileID: 1032321681624852975}
   - component: {fileID: 5162509403482784662}
+  - component: {fileID: 7208016678330182693}
   m_Layer: 0
   m_Name: turnRight
   m_TagString: turnRight
@@ -105,3 +106,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.67173874, y: 1, z: 0.59223413}
   m_Center: {x: -0.16413063, y: 0, z: -0.20388293}
+--- !u!114 &7208016678330182693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876517771962611427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f14c5bdd01c8244973802157d18723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

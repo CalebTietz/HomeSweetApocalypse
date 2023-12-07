@@ -10,7 +10,12 @@ public class ZombieTurnDetection : MonoBehaviour
         string tag = other.gameObject.tag;
 
         if (tag == null) return;
-        
+
+        Facing facing = gameObject.GetComponentInParent<Zombie>().getFacing();
+        turnIfFacing turnIfFacing = other.gameObject.GetComponent<PathTurn>().turnIfFacing;
+
+        if (facing.ToString() != turnIfFacing.ToString()) return; // ensure the zombie is facing the proper direction to turn
+
         if (tag == "turnLeft")
         {
             gameObject.GetComponentInParent<Zombie>().turn("left");

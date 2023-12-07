@@ -3,6 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Facing
+{
+    up,
+    down,
+    left,
+    right
+};
+
 public class Zombie : MonoBehaviour
 {
     
@@ -28,6 +36,8 @@ public class Zombie : MonoBehaviour
 
     private Material[] mats;
     private Color[] originalColors;
+
+    private Facing facing;
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +115,32 @@ public class Zombie : MonoBehaviour
             Destroy(gameObject);
             
         }
+    }
+
+    public Facing getFacing()
+    {
+        int yRotation = (int) Math.Round(transform.eulerAngles.y) % 360;
+        
+        switch(yRotation)
+        {
+            case 0:
+                facing = Facing.left;
+                break;
+
+            case 90:
+                facing = Facing.up;
+                break;
+
+            case 180:
+                facing = Facing.right;
+                break;
+
+            case 270:
+                facing = Facing.down;
+                break;
+        }
+
+        return facing;
     }
 
     private IEnumerator blinkRed()
