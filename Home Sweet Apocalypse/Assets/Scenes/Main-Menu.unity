@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Turn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6248446103358109308, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
+      propertyPath: turnIfFacing
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5086533410957383784, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
@@ -998,6 +1002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Turn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6248446103358109308, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
+      propertyPath: turnIfFacing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5086533410957383784, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
@@ -1496,6 +1504,10 @@ PrefabInstance:
     - target: {fileID: 1559001452192779166, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
       propertyPath: m_Name
       value: Path Turn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248446103358109308, guid: fcbf9991c53a4a84abd620260d675e70, type: 3}
+      propertyPath: turnIfFacing
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
