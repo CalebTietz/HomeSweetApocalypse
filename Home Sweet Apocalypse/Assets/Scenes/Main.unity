@@ -11048,6 +11048,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 226788392497582515, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2645121566473215074, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: bullet
       value: 
@@ -11095,6 +11099,14 @@ PrefabInstance:
     - target: {fileID: 5002149694452246354, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696950213456886698, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507113357242901804, guid: 15724b32db3cd9745a29122dbaad0539, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
