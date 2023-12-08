@@ -15,6 +15,7 @@ public class House : MonoBehaviour
 
             Camera.main.GetComponent<Wave>().zombieDied();
             Destroy(collidedWith);
+            ScoreKeeper.score-=100;
             
 
             HealthBar bar =GameObject.Find("Health Bar").GetComponent<HealthBar>();
