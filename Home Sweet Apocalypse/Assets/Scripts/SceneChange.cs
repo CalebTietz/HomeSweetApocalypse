@@ -12,10 +12,14 @@ public class SceneChange : MonoBehaviour
         ScoreKeeper.score=0;
         SceneManager.LoadScene("Main");
     }
+
     public void MainMenu(){
         ScoreKeeper.score=0;
         SceneManager.LoadScene("Main-Menu");
         //need a main menu scene, I think Luke Z was working on that
     }
 
+    public void HelpMenu(){
+        SceneManager.LoadScene("HelpMenu");
+    }
 }

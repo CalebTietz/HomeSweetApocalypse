@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 16553176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1028182975}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: HelpMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &16553176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +841,7 @@ GameObject:
   - component: {fileID: 1028182973}
   - component: {fileID: 1028182972}
   - component: {fileID: 1028182971}
+  - component: {fileID: 1028182975}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -921,6 +934,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1028182975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028182970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de830f624cf71f745bcf6954620c827a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1097276101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,7 +1200,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1305432656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1028182975}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: MainGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1305432656
 MonoBehaviour:
   m_ObjectHideFlags: 0
