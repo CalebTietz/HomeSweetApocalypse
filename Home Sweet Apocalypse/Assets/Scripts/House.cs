@@ -13,7 +13,9 @@ public class House : MonoBehaviour
         if (collidedWith.CompareTag("Zombie"))
         {
 
+            Camera.main.GetComponent<Wave>().zombieDied();
             Destroy(collidedWith);
+            
 
             HealthBar bar =GameObject.Find("Health Bar").GetComponent<HealthBar>();
             bar.loseHealth();
