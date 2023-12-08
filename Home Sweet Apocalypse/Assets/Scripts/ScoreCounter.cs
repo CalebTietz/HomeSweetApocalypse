@@ -7,7 +7,7 @@ using TMPro;
 public class ScoreCounter : MonoBehaviour
 {
     [Header("Dynamic")]
-    public int score = 0;
+    public int score;
     
     private TMP_Text uiText; 
     // Start is called before the first frame update
@@ -19,6 +19,6 @@ public class ScoreCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        uiText.text = score.ToString("#,0");
+        uiText.text = "Your Score is: "+ ScoreKeeper.score.ToString("#,0");
     }
 }

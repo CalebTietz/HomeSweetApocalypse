@@ -30,6 +30,7 @@ public class Wave : MonoBehaviour
         waveCompleteText.enabled = false;
 
         GameObject scoreGO = GameObject.Find("ScoreCounter");
+        
 
         scoreCounter = scoreGO.GetComponent<ScoreCounter>();
 
@@ -119,7 +120,8 @@ public class Wave : MonoBehaviour
     {
         zombiesRemaining--;
         Debug.Log(zombiesRemaining);
-        scoreCounter.score+=100;
+        //scoreCounter.score+=100;
+        ScoreKeeper.score+=100;
         if(zombiesRemaining <= 0 )
         {
             yield return new WaitForSeconds(0.1f);

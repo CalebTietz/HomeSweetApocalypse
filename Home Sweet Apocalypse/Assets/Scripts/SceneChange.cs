@@ -8,11 +8,13 @@ public class SceneChange : MonoBehaviour
     public void Start(){
 
     }
-    public void LukeMain(){
-        SceneManager.LoadScene("LukeMain");
+    public void MainGame(){
+        ScoreKeeper.score=0;
+        SceneManager.LoadScene("Main");
     }
     public void MainMenu(){
-        //SceneManager.LoadScene();
+        ScoreKeeper.score=0;
+        SceneManager.LoadScene("Main-Menu");
         //need a main menu scene, I think Luke Z was working on that
     }
 
