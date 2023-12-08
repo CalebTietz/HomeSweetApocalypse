@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Seems Some zombies got by you when you weren''t looking huh.
+  m_text: 'Seems some zombies got by you when you weren''t looking, huh?
 
     Wanna
     try again?

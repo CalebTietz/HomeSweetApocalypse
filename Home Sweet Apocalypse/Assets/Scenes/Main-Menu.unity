@@ -1115,7 +1115,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1028182975}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: HelpMenu
+        m_MethodName: Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
