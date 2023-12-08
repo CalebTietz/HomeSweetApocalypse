@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LukeMain.unity
-    guid: df41baebcb7fb38498138f47aa94ce44
-  - enabled: 1
     path: Assets/Scenes/YouLose.unity
     guid: 45ac0af716e38f94292bafb0f57f421b
   - enabled: 1
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HelpMenu.unity
     guid: 7d63f48545c593b4cad38e732225581f
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0f1a9318852f80e47bcfc1c38d060def
   m_configObjects: {}

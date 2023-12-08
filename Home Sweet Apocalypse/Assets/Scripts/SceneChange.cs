@@ -22,4 +22,7 @@ public class SceneChange : MonoBehaviour
     public void HelpMenu(){
         SceneManager.LoadScene("HelpMenu");
     }
+    public void Credits(){
+        SceneManager.LoadScene("Credits");
+    }
 }
