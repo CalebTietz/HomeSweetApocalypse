@@ -68,6 +68,6 @@ public class HealthBar : MonoBehaviour
 
     public void loseHealth(){
 
-        health -= .25f;
+        health -= .1f;
     }
 }
