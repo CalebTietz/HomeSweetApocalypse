@@ -23,10 +23,12 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 20;
 
     private Rigidbody rb;
+    private AudioSource laserGunSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        laserGunSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -116,8 +118,8 @@ public class Player : MonoBehaviour
                 launchPoint = launchPointTrans.gameObject;
                 launchPos = launchPointTrans.position;
 
+                laserGunSound.Play();
                 bullet = Instantiate(bulletPrefab) as GameObject;
-                
 
                 bullet.transform.position = launchPos;
                 bullet.transform.LookAt(temp);
